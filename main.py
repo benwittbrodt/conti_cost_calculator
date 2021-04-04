@@ -1,7 +1,6 @@
 # Pandas for data handling (if needed)
 import pandas as pd
-from sympy import *
-import numpy
+
 
 # Declare variables for tires
 # not being used at the moment as just the bottom list to simplify and make work
@@ -65,24 +64,27 @@ var_dict = {
 }
 
 
-# Define symbols for calculation equation
-x, y, a, b = symbols("x y a b")
+def break_even_calc(var_dict):
+
+    # Getting all values in a list
+    tire_list = [var_dict[ii] for ii in var_dict]
+    tire_list_names = [ii for ii in var_dict]
+
+    # Finding the None index - returning the first item
+    empty = [ii for ii in range(len(tire_list)) if tire_list[ii] == None][0]
+
+    # Using the index to compute the value
+    if empty == 0:
+        break_variable = tire_list[1] / (tire_list[3] / tire_list[2])
+    elif empty == 1:
+        break_variable = tire_list[0] * (tire_list[3] / tire_list[2])
+    elif empty == 2:
+        break_variable = tire_list[3] / (tire_list[1] / tire_list[0])
+    else:
+        break_variable = tire_list[2] * (tire_list[1] / tire_list[0])
+
+    return tire_list_names[empty], break_variable
 
 
-def break_even_calc():
-
-    comparison_expr = (x / y) - (a / b)
-    known_vars = [(x, c_steer_p), (y, c_steer_m), (a, com_steer_p), (b, com_steer_m)]
-    comparison_expr_solve = solve(comparison_expr.subs(known_vars))
-
-    break_even = float(comparison_expr_solve[0])
-    for key in var_dict:
-        if var_dict[key] == None:
-            break_variable = key
-    return break_even, break_variable  # make this the unknown_val
-
-
-break_even, break_variable = break_even_calc()
-
-
-print(break_variable, break_even)
+# Running it
+print(break_even_calc(var_dict))
