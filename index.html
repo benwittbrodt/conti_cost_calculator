@@ -1,20 +1,55 @@
-<head>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <div class="half-column">
-            <form action="" method="get">
-                <label for="competitor_steer_mileage" class="form-item">Competitor Steer Mileage</label>
-                    <input type="text" id="competitor_steer_mileage" class="form-item">
-                <label for="competitor_steer_cost" class="form-item">Competitor Steer Cost</label>
-                    <input type="text" id="competitor_steer_cost" class="form-item">
-                <label for="conti_steer_cost" class="form-item">Conti Steer Cost</label>
-                    <input type="text" id="conti_steer_cost" class="form-item">
-                <label for="conti_steer_mileage" class="form-item">Conti Steer Mileage</label>
-                    <input type="text" id="conti_steer_mileage" class="form-item">
-                <button type="submit" class="form-submit-btn">Submit</button>
-            </form>
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conti Cost Calculator</title>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="half-column">
+                    <form action="" method="get">
+                        <label for="competitor_steer_mileage" class="form-item">
+                            Competitor Steer Mileage
+                        </label>
+                        <input type="text" id="competitor_steer_mileage" class="form-item" />
+                        <label for="competitor_steer_cost" class="form-item">
+                            Competitor Steer Cost
+                        </label>
+                        <input type="text" id="competitor_steer_cost" class="form-item" />
+                        <label for="conti_steer_cost" class="form-item">
+                            Conti Steer Cost
+                        </label>
+                        <input type="text" id="conti_steer_cost" class="form-item" />
+                        <label for="conti_steer_mileage" class="form-item">
+                            Conti Steer Mileage
+                        </label>
+                        <input type="text" id="conti_steer_mileage" class="form-item" />
+                        <button type="submit" class="form-submit-btn">Submit</button>
+                    </form>
+                </div>
+                <div class="half-column">
+                    <h1>Mileage To Beat</h1>
+                    <br>
+                    <h1>Price To Beat</h1>
+                    <br>
+                    <h1>Conti Mileage</h1>
+                    <br>
+                    <h1>Conti Price</h1>
+                </div>
+            </div>
+            <div>
+                <h1>Price Target</h1>
+                <h1>Mileage Target</h1>
+            </div>
         </div>
-    </div>
-</body>
+        <script src="script.js"></script>
+    </body>
+
+</html>
