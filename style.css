@@ -1,0 +1,33 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+
+  max-width: 960px;
+
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.half-column {
+  display: flex;
+  max-width: 50%;
+}
+
+form {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  background: #ffa500;
+}
+
+.form-item {
+  display: flex;
+  margin: 2px 0 0 0;
+}
+
+.form-submit-btn {
+  margin: 5px 0 0 0;
+  padding: 8px;
+  font-size: 1rem;
+  background: #888888;
+  border-radius: 6px;
+}
