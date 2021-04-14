@@ -7,31 +7,36 @@
   padding-right: 10px;
   padding-left: 10px;
 }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .half-column {
   display: flex;
-  max-width: 50%;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-basis: 50%;
 }
-.row {
-  display: flex;
-}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 form {
   width: 100%;
-  padding: 10px;
   border-radius: 6px;
   background: #ffa500;
 }
 
 .form-item {
   display: flex;
-  margin: 2px 0 0 0;
+  flex-direction: column;
+  margin: 10px;
 }
 
 .form-submit-btn {
-  margin: 5px 0 0 0;
+  margin: 0 10px 10px 10px;
   padding: 8px;
   font-size: 1rem;
   background: #888888;
