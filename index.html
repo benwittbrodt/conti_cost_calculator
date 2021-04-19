@@ -4,37 +4,42 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Conti Cost Calculator</title>
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css" />
     </head>
 
     <body>
         <div class="container">
-            <div class="flex-container">
-                <div class="half-column">
+            <div class="row">
+                <div class="col-6">
                     <form action="" method="get">
-                        <label for="competitor_steer_mileage" class="form-item">
-                            Competitor Steer Mileage
-                        </label>
-                        <input type="text" id="competitor_steer_mileage" class="form-item" />
-                        <label for="competitor_steer_cost" class="form-item">
-                            Competitor Steer Cost
-                        </label>
-                        <input type="text" id="competitor_steer_cost" class="form-item" />
-                        <label for="conti_steer_cost" class="form-item">
-                            Conti Steer Cost
-                        </label>
-                        <input type="text" id="conti_steer_cost" class="form-item" />
-                        <label for="conti_steer_mileage" class="form-item">
-                            Conti Steer Mileage
-                        </label>
-                        <input type="text" id="conti_steer_mileage" class="form-item" />
-                        <button type="submit" class="form-submit-btn">Submit</button>
+                        <div class="row">
+                            <div class="col-8 ms-2">
+                                <label for="competitor_steer_mileage" class="form-label">
+                                    Competitor Steer Mileage
+                                </label>
+                                <input type="text" id="competitor_steer_mileage" class="form-control" />
+                                <label for="competitor_steer_cost" class="form-label">
+                                    Competitor Steer Cost
+                                </label>
+                                <input type="text" id="competitor_steer_cost" class="form-control" />
+                                <label for="conti_steer_cost" class="form-label">
+                                    Conti Steer Cost
+                                </label>
+                                <input type="text" id="conti_steer_cost" class="form-control" />
+                                <label for="conti_steer_mileage" class="form-label">
+                                    Conti Steer Mileage
+                                </label>
+                                <input type="text" id="conti_steer_mileage" class="form-control" />
+                                <button type="submit" class="btn btn-secondary mt-2 mb-3 ms-2">Submit</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
-                <div class="half-column">
+                <div class="col-6">
                     <h2>Mileage Reference</h2>
                     <br>
                     <h2>Price Reference</h2>
@@ -44,12 +49,15 @@
                     <h2>Conti Price</h2>
                 </div>
             </div>
-                
+
             <div>
                 <h1>Price Target</h1>
                 <h1>Mileage Target</h1>
             </div>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+            crossorigin="anonymous"></script>
         <script src="script.js"></script>
     </body>
 
